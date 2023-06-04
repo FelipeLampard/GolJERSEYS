@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    font-family: Roboto;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "aside" "search" "main" "footer";
+    grid-template-rows: 8% 10% auto 12%;
+    }
+    
+    aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    }
+    
+    main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    }
+    
+    .search-filter{
+    grid-area: search;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .caja1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    menu{
+        display: flex;
+    }
+    
+    i{
+        padding: 1rem;
+    }
+    
+    select{
+        width: 80%;
+        border: none;
+        padding: 2px;
+        background-color: black;
+        color: white;
+    }
+    
+    label{
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .caja{
+        display: none;
+    }
+    .paginas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .paginas a{
+        float: left;
+        padding: 8px 1rem;
+        margin: 0 5px;
+        margin-top: 1px;
+        text-decoration: none;
+    }
+    
+    .caja1 img{
+        width: 12rem;
+        height: 14rem;
+        padding: 1rem;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+
+    .caja1:hover img{
+        filter: grayscale(0%);
+        transition: 3s ease-in;
+    }
+
+    .caja1:hover{
+        transform: scale(1.10);
+        transition: 1s ease;
+    }
+    
+    .text a{
+        font-size: 400;
+    }
+    
+    .boton{
+        padding: 0.5rem;
+        border-radius: 10%;
+    }
+    
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+    .paginas{
+       padding: 2rem;
+    }
+    
+    .menu li{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+    .new img{
+        height: 2rem;
+        width: 2rem;
+        padding-left: 0.5rem;
+    }
+
+
+
+    .animation{
+        animation: rotate 3s infinite;
+    }
+     
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+   
+
+    
+    
+    
+    @media (min-width: 576px){
+        body{
+            grid-template-areas: "aside search" "aside main" "footer main";
+            grid-template-columns: 15% 85%;
+            grid-template-rows: 8% auto 10%;
+        }
+        
+        aside{
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1rem;
+        }
+        .barra{
+            display: none;
+        }
+        menu{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        footer{
+            padding: 0.5rem;
+        }
+    
+        .foot{
+            text-align: center;
+            justify-content: space-around;
+        }
+    
+        .iconos{
+            align-items: center;
+            padding-bottom: 0.5rem;
+        }
+            
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 1rem;
+        }
+    
+        .caja1{
+            width: 24%;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .caja{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 24%;
+            height: 20rem;
+            margin: 10px 0;
+        }
+        .caja img{
+            width: 7rem;
+            height: 10rem;
+            padding: 0.5rem;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+
+        .caja:hover img{
+            filter: grayscale(0%);
+            transition: 3s ease-in;
+        }
+
+        .caja:hover{
+            transform: scale(1.10);
+            transition: 1s ease;
+        }
+         
+        .caja1 img{
+            width: 7rem;
+            height: 10rem;
+            object-fit: cover;
+            padding: 0.5rem;
+        }
+
+        .response img{
+            padding: 1rem;
+        }
+
+        .menu li{
+            padding: 0.5rem;
+            
+            
+        }
+        
+    
+    
+    
+    }
